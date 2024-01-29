@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         source: '/catalog/:path*',
-        destination: `http://localhost:3001/:path*`,
+        destination: `${CHECKOUT_URL}/:path*`,
       },
       {
         source: '/checkout',
