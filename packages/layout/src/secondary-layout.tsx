@@ -11,7 +11,7 @@ export const SecondaryLayout = ({children }: LayoutProps) => (
     <div style={{margin: "60px 0"}}>{children}</div>
 
     <footer style={{backgroundColor: "#bbf7d0", width: "100%", textAlign: "center", padding: "20px"}}>
-        Footer
+        Footer New Changes
     </footer>
   </div>
 )
