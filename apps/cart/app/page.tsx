@@ -1,26 +1,21 @@
-
 import styles from "./page.module.css";
 
 const LINKS = [
   {
-    title: "Go to Catalog",
-    href: "/catalog",
+    title: "Homepage",
+    href: "/",
   },
   {
-    title: "Go to Checkout",
+    title: "Checkout",
     href: "/checkout",
-  }
-  ,
-  {
-    title: "Go to Cart",
-    href: "/cart",
   }
 ];
 
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
-        <h1>I am the homepage and content pages</h1>
+
+        <h1>I am the Cart</h1>
         <div style={{display: "flex"}}>
           {LINKS.map(({ title, href }) => (
             <a href={href} key={title} title={title} style={{padding: "50px"}}>

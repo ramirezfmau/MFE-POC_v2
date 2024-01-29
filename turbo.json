@@ -3,7 +3,7 @@
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build", "$CHECKOUT_URL", "$CATALOG_URL"],
+      "dependsOn": ["^build", "$CHECKOUT_URL", "$CATALOG_URL", "$CART_URL"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {

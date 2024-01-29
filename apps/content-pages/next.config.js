@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const { CATALOG_URL, CHECKOUT_URL } = process.env;
+const { CATALOG_URL, CHECKOUT_URL, CART_URL } = process.env;
 
 
 module.exports = {
@@ -22,6 +22,10 @@ module.exports = {
       {
         source: '/checkout',
         destination: `${CHECKOUT_URL}`,
+      },
+      {
+        source: '/cart',
+        destination: `${CART_URL}`,
       },
     ]
   },
