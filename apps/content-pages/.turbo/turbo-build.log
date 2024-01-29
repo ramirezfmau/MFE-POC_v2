@@ -1,0 +1,36 @@
+
+> content-pages@1.0.0 build /Users/mauricio.ramirez/Documents/MFE_POC/MFE-POC/apps/content-pages
+> next build
+
+   ▲ Next.js 14.0.4
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+./app/layout.tsx
+4:10  Warning: 'SecondaryLayout' is defined but never used.  no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/6) ...
+   Generating static pages (1/6) 
+   Generating static pages (2/6) 
+   Generating static pages (4/6) 
+ ✓ Generating static pages (6/6) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    533 B          82.4 kB
+├ ○ /_not-found                          869 B          82.7 kB
+└ ○ /about                               533 B          82.4 kB
++ First Load JS shared by all            81.9 kB
+  ├ chunks/0d9284fb-9d6bbd62e944531a.js  53.3 kB
+  ├ chunks/275-a46b27c8adfccaae.js       26.7 kB
+  ├ chunks/main-app-962ba55bcb26dddd.js  219 B
+  └ chunks/webpack-7c1aa8777a1f5933.js   1.69 kB
+
+
+○  (Static)  prerendered as static content
+

@@ -1,0 +1,30 @@
+
+> checkout@1.0.0 build /Users/mauricio.ramirez/Documents/MFE_POC/MFE-POC/apps/checkout
+> next build
+
+   ▲ Next.js 14.0.4
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/5) ...
+   Generating static pages (1/5) 
+   Generating static pages (2/5) 
+   Generating static pages (3/5) 
+ ✓ Generating static pages (5/5) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    530 B          82.4 kB
+└ ○ /_not-found                          869 B          82.7 kB
++ First Load JS shared by all            81.9 kB
+  ├ chunks/0d9284fb-9d6bbd62e944531a.js  53.3 kB
+  ├ chunks/275-a46b27c8adfccaae.js       26.7 kB
+  ├ chunks/main-app-962ba55bcb26dddd.js  219 B
+  └ chunks/webpack-fd758f67a1abd03d.js   1.68 kB
+
+
+○  (Static)  prerendered as static content
+
