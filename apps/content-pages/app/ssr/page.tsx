@@ -9,7 +9,7 @@ const LINKS = [
   },
   {
     title: "Go to Checkout",
-    href: "/checkoutb",
+    href: "/checkout",
   }
   ,
   {
