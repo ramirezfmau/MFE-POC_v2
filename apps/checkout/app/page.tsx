@@ -16,10 +16,6 @@ const LINKS = [
   }
   ,
   {
-    title: "Go to Cart",
-    href: "/cart",
-  },
-  {
     title: "Go to About",
     href: "/about",
   },

@@ -1,4 +1,4 @@
-const { CATALOG_URL, CHECKOUT_URL, CART_URL, CHECKOUT_URLB } = process.env;
+const { CATALOG_URL, CHECKOUT_URL, CART_URL } = process.env;
 
 
 module.exports = {
