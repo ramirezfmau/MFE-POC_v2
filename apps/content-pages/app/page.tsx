@@ -37,7 +37,7 @@ const LINKS = [
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
-        <h1>I am the homepage and content pages</h1>
+        <h1>I am the Homepage and Content pages</h1>
         <div style={{display: "flex"}}>
           {LINKS.map(({ title, href }) => (
             <a href={href} key={title} title={title} style={{padding: "50px"}}>
