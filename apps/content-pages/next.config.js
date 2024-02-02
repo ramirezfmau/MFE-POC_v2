@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         source: '/catalog/:slug*',
-        destination: `${CATALOG_URL}/:slug*`,
+        destination: `${CATALOG_URL}/catalog/:slug*`,
       },
       {
         source: '/checkout',
