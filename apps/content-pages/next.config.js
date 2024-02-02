@@ -1,6 +1,4 @@
-/** @type {import('next').NextConfig} */
-
-const { CATALOG_URL, CHECKOUT_URL, CART_URL } = process.env;
+const { CATALOG_URL, CHECKOUT_URL, CART_URL, CHECKOUT_URLB } = process.env;
 
 
 module.exports = {
@@ -11,21 +9,30 @@ module.exports = {
       /**
        * Rewrites for Multi Zones
        */
-      {
-        source: '/catalog',
-        destination: `${CATALOG_URL}`,
-      },
-      {
-        source: '/catalog/:slug*',
-        destination: `${CATALOG_URL}/catalog/:slug*`,
-      },
+
       {
         source: '/checkout',
-        destination: `${CHECKOUT_URL}`,
+        destination: `${CHECKOUT_URL}/checkout`,
+      },
+      {
+        source: '/checkout/:path*',
+        destination: `${CHECKOUT_URL}/checkout/:path*`,
       },
       {
         source: '/cart',
-        destination: `${CART_URL}`,
+        destination: `${CART_URL}/cart`,
+      },
+      {
+        source: '/cart/:path*',
+        destination: `${CART_URL}/cart/:path*`,
+      },
+      {
+        source: '/catalog',
+        destination: `${CATALOG_URL}/catalog`,
+      },
+      {
+        source: '/catalog/:path*',
+        destination: `${CATALOG_URL}/catalog/:path*`,
       },
     ]
   },

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 
 const LINKS = [
@@ -40,7 +41,7 @@ export default function Page(): JSX.Element {
         <h1>I am the Cart</h1>
         <div style={{display: "flex"}}>
           {LINKS.map(({ title, href }) => (
-            <a href={href} key={title} title={title} style={{padding: "50px"}}>
+            <a href={href} style={{padding: "50px"}}>
               {title}
             </a>
           ))}

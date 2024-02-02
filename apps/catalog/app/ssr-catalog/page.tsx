@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import styles from "./../page.module.css";
 
 const LINKS = [
@@ -54,7 +55,7 @@ export default async function Page() {
       <h1>I am SSR Catalog Pages</h1>
       <div style={{ display: "flex" }}>
         {LINKS.map(({ title, href }) => (
-          <a href={href} key={title} title={title} style={{ padding: "50px" }}>
+          <a href={href} style={{padding: "50px"}}>
             {title}
           </a>
         ))}
