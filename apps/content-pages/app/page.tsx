@@ -4,31 +4,35 @@ import styles from "./page.module.css";
 
 const LINKS = [
   {
-    title: "Go to Catalog",
+    title: "Catalog app",
     href: "/catalog",
   },
   {
-    title: "Go to Checkout",
+    title: "Catalog app => SSR ",
+    href: "catalog/ssr-catalog",
+  },
+  {
+    title: "Checkout app",
     href: "/checkout",
   }
   ,
   {
-    title: "Go to SSR Catalog",
-    href: "catalog/ssr-catalog",
-  }
+    title: "Cart app",
+    href: "/cart",
+  },
 ];
 
 const INTERNAL_LINKS = [
   {
-    title: "Go to Home",
+    title: "Content Pages app =>  Home",
     href: "/",
   },
   {
-    title: "Go to About",
+    title: "Content Pages app => About",
     href: "/about",
   },
   {
-    title: "Go to SSR",
+    title: "Content Pages app => SSR",
     href: "/ssr",
   },
 ];
@@ -38,18 +42,25 @@ const INTERNAL_LINKS = [
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
-        <h1>I am the Homepage and Content pages</h1>
-        <div style={{display: "flex"}}>
-          {INTERNAL_LINKS.map(({ title, href }) => (
-          <Link href={href} style={{padding: "50px"}}>
-            {title}
-          </Link>
-          ))}
-          {LINKS.map(({ title, href }) => (
-          <a href={href} style={{padding: "50px"}}>
-            {title}
-          </a>
-          ))}
+        <h1>I am Content pages App - HomePage </h1>
+        <h2 style={{marginTop: '50px'}}>Find apps/pages some examples below: </h2>
+        <div style={{display: "flex", marginTop: '20px'}}>
+          <ul>
+            {INTERNAL_LINKS.map(({ title, href }) => (
+              <li style={{padding: '10px'}}>
+                <Link href={href}>
+                  {title}
+                </Link>
+              </li>
+            ))}
+            {LINKS.map(({ title, href }) => (
+              <li style={{padding: '10px'}}>
+                <a href={href}>
+                  {title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
     </main>
   );

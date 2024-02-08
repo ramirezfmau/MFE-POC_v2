@@ -3,44 +3,52 @@ import styles from "./page.module.css";
 
 const LINKS = [
   {
-    title: "Go to Home",
+    title: "Content Pages app =>  Home",
     href: "/",
   },
   {
-    title: "Go to Catalog",
+    title: "Content Pages app => About",
+    href: "/about",
+  },
+  {
+    title: "Content Pages app => SSR",
+    href: "/ssr",
+  },
+  {
+    title: "Catalog app",
     href: "/catalog",
   },
   {
-    title: "Go to Checkout",
+    title: "Catalog app => SSR ",
+    href: "catalog/ssr-catalog",
+  },
+  {
+    title: "Checkout app",
     href: "/checkout",
   }
   ,
   {
-    title: "Go to About",
-    href: "/about",
+    title: "Cart app",
+    href: "/cart",
   },
-  {
-    title: "Go to SSR",
-    href: "/ssr",
-  },
-  {
-    title: "Go to SSR Catalog",
-    href: "/catalog/ssr-catalog",
-  }
 ];
 
 
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
-
-        <h1>I am the checkout</h1>
-        <div style={{display: "flex"}}>
-          {LINKS.map(({ title, href }) => (
-            <a href={href} key={title} title={title} style={{padding: "50px"}}>
-              {title}
-            </a>
-          ))}
+        <h1>I am the Checkout App </h1>
+        <h2 style={{marginTop: '50px'}}>Find apps/pages some examples below: </h2>
+        <div style={{display: "flex", marginTop: '20px'}}>
+          <ul>
+            {LINKS.map(({ title, href }) => (
+              <li style={{padding: '10px'}}>
+                <a href={href}>
+                  {title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
     </main>
   );

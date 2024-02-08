@@ -1,33 +1,32 @@
 
-import Link from "next/link";
 import styles from "./../page.module.css";
 
 const LINKS = [
   {
-    title: "Go to Home",
+    title: "Content Pages app =>  Home",
     href: "/",
   },
   {
-    title: "Go to Catalog",
+    title: "Content Pages app => About",
+    href: "/about",
+  },
+  {
+    title: "Content Pages app => SSR",
+    href: "/ssr",
+  },
+  {
+    title: "Catalog app",
     href: "/catalog",
   },
   {
-    title: "Go to Checkout",
+    title: "Checkout app",
     href: "/checkout",
   }
   ,
   {
-    title: "Go to About",
-    href: "/about",
+    title: "Cart app",
+    href: "/cart",
   },
-  {
-    title: "Go to SSR",
-    href: "/ssr",
-  },
-  {
-    title: "Go to SSR Catalog",
-    href: "/catalog/ssr-catalog",
-  }
 ];
 
 async function getData() {
@@ -48,14 +47,19 @@ export default async function Page() {
   const data = await getData()
   return (
     <main className={styles.main}>
-      <h1>I am SSR Catalog Pages</h1>
-      <div style={{ display: "flex" }}>
-        {LINKS.map(({ title, href }) => (
-          <a href={href} style={{padding: "50px"}}>
-            {title}
-          </a>
-        ))}
-      </div>
+        <h1>I am the Catalog App / Server Side Rendering</h1>
+        <h2 style={{marginTop: '50px'}}>Find apps/pages some examples below: </h2>
+        <div style={{display: "flex", marginTop: '20px'}}>
+          <ul>
+            {LINKS.map(({ title, href }) => (
+              <li style={{padding: '10px'}}>
+                <a href={href}>
+                  {title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       <div style={{display: "flex", flexWrap: "wrap"}}>
         {
           data.map((product: any) =>
